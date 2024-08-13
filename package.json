@@ -4,15 +4,17 @@
   "description": "![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^5.0.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
     "prettier": "3.3.3",
     "sass": "^1.77.8"
   }

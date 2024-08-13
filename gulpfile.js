@@ -1,12 +1,14 @@
 const { src, dest, watch, series } = require('gulp')
+const htmlmin = require('gulp-htmlmin')
 const sass = require('gulp-sass')(require('sass'))
 const sourcemaps = require('gulp-sourcemaps')
+const terser = require('gulp-terser')
 
 function html() {
-    return src('./src/*.html').pipe(dest('./dist/'))
+    return src('./src/*.html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(dest('./dist/'))
 }
-
-exports.html = html
 
 function styles() {
     return src('./src/styles/*.scss')
@@ -16,19 +18,17 @@ function styles() {
         .pipe(dest('./dist/styles/'))
 }
 
-exports.styles = styles
-
 function js() {
-    return src('./src/scripts/*.js').pipe(dest('./dist/scripts/'))
+    return src('./src/scripts/*.js')
+        .pipe(terser())
+        .pipe(dest('./dist/scripts/'))
 }
-
-exports.js = js
 
 function assets() {
-    return src('./src/images/*').pipe(dest('./dist/images/'))
+    return src('./src/images/**/*', { encoding: false }).pipe(
+        dest('./dist/images/')
+    )
 }
-
-exports.assets = assets
 
 function watchTask() {
     watch('./src/*.html', html)
@@ -36,7 +36,5 @@ function watchTask() {
     watch('./src/scripts/*.js', js)
     watch('./src/images/*', assets)
 }
-
-exports.watchTask = watchTask
 
 exports.default = series(html, styles, js, assets, watchTask)
