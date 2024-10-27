@@ -1,0 +1,21 @@
+// media query's mixin
+// sm: mobile
+@mixin media-sm {
+    @media screen and (min-width: 640px) {
+        @content;
+    }
+}
+
+// md: tablet
+@mixin media-md {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+// lg: laptop
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}

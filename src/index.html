@@ -17,23 +17,61 @@
         <link rel="stylesheet" href="./styles/main.css" />
     </head>
     <body>
-        About Careers Events Products Support Immersive experiences that deliver
-        The leader in interactive VR Founded in 2011, Loopstudios has been
+        <header class="header">
+            <div class="container">
+                <nav class="mobile-navbar">
+                    <a href="#" class="logo mobile-navbar__logo">
+                        <img src="./images/logo.svg" alt="Loopstudios" />
+                        <span class="sr-only">Loopstudios</span>
+                    </a>
+                    <button
+                        id="menu-toggle"
+                        class="mobile-navbar__btn"
+                        aria-controls="menu"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        <span class="sr-only">Menu Toggle</span>
+                    </button>
+                    <menu
+                        id="menu"
+                        class="menu font-josefin"
+                        aria-labelledby="menu-toggle"
+                        aria-hidden="true"
+                    >
+                        <li class="menu__item"><a href="#">About</a></li>
+                        <li class="menu__item"><a href="#">Careers</a></li>
+                        <li class="menu__item"><a href="#">Events</a></li>
+                        <li class="menu__item"><a href="#">Products</a></li>
+                        <li class="menu__item"><a href="#">Support</a></li>
+                    </menu>
+                </nav>
+                <nav class="desktop-navbar">
+                    <div class="logo">
+                        <img src="./images/logo.svg" alt="Loopstudios" />
+                    </div>
+                    <menu id="menu" class="menu" aria-labelledby="menu-btn">
+                        <li class="menu__item">About</li>
+                        <li class="menu__item">Careers</li>
+                        <li class="menu__item">Events</li>
+                        <li class="menu__item">Products</li>
+                        <li class="menu__item">Support</li>
+                    </menu>
+                </nav>
+                <div class="header__content">
+                    <h1 class="title font-josefin">
+                        Immersive experiences that deliver
+                    </h1>
+                </div>
+            </div>
+        </header>
+        <!-- The leader in interactive VR Founded in 2011, Loopstudios has been
         producing world-class virtual reality projects for some of the best
         companies around the globe. Our award-winning creations have transformed
         businesses through digital experiences that bind to their brand. Our
         creations See all Deep earth Night arcade Soccer team VR The grid From
         up above VR Pocket borealis The curiosity Make it fisheye About Careers
-        Events Products Support © 2021 Loopstudios. All rights reserved.
-
-        <div class="attribution">
-            Challenge by
-            <a
-                href="https://www.frontendmentor.io?ref=challenge"
-                target="_blank"
-                >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
-        </div>
+        Events Products Support © 2021 Loopstudios. All rights reserved. -->
         <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>

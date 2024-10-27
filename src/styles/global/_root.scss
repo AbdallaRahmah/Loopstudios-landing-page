@@ -1,0 +1,14 @@
+:root {
+    // Color Variables
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+
+    // Typography Variables
+    font-size: 15px;
+
+    --font-h1: clamp(2.986rem, 2vw + 2.488rem, 3.815rem);
+    --font-h2: clamp(2.488rem, 1.5vw + 2.074rem, 3.052rem);
+    --font-p: clamp(0.9rem, 1vw + 0.833rem, 1rem);
+}

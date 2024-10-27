@@ -11,11 +11,14 @@ function html() {
 }
 
 function styles() {
-    return src('./src/styles/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(sourcemaps.write())
-        .pipe(dest('./dist/styles/'))
+    return (
+        src('./src/styles/*.scss')
+            .pipe(sourcemaps.init())
+            // .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+            .pipe(sass().on('error', sass.logError))
+            .pipe(sourcemaps.write())
+            .pipe(dest('./dist/styles/'))
+    )
 }
 
 function js() {
