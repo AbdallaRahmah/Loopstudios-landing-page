@@ -1,14 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,300;1,300&display=swap');
+
 :root {
     // Color Variables
-    --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
-    --dark-gray: hsl(0, 0%, 55%);
-    --very-dark-gray: hsl(0, 0%, 41%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-gray: hsl(0, 0%, 55%);
+    --clr-dark-gray: hsl(0, 0%, 41%);
 
     // Typography Variables
-    font-size: 15px;
+    --size-xxl: clamp(2.892rem, 2.674rem + 1.09vw, 3.655rem);
+    --size-xl: clamp(2.281rem, 2.1064rem + 0.8729vw, 2.892rem);
+    --size-l: clamp(1.793rem, 1.6536rem + 0.6971vw, 2.281rem);
+    --size-s: clamp(0.84rem, 0.7714rem + 0.3429vw, 1.08rem);
+}
 
-    --font-h1: clamp(2.986rem, 2vw + 2.488rem, 3.815rem);
-    --font-h2: clamp(2.488rem, 1.5vw + 2.074rem, 3.052rem);
-    --font-p: clamp(0.9rem, 1vw + 0.833rem, 1rem);
+.font-alata {
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-josefin {
+    font-family: 'Josefin Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
